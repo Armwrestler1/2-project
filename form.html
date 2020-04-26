@@ -8,34 +8,82 @@
     </head>
     <body>
         <header>
-            <h1>Форма зворотнього звязку</h1>
+            <h1>Форма для участі у фан групі</h1>
+            <h2>Заповніть форму нижче для того щоб ми дізнались про вас більше і могли запропонувати для вас цікаві фільми та серіали на основі ваших вподобань!</h2>
             <nav>
                 <a href="index.html">Головна</a>
             </nav>
         </header>
         <main>
-            <form action="https://formspree.io/myydrqvj" method="POST">
+            <form action="https://formspree.io/myydrqvj" method="POST" target="_self">
                 <label>
-                    Client name:
-                    <input type="text" name="client-name" placeholder="Your name"> 
+                    Ваше імя:
+                    <input type="text" name="client-name" placeholder="Імя" required> 
                 </label>
                 <br>
                 <label>
-                    Client email:   
-                    <input type="email" name="client-email" placeholder="Your email adress"> 
+                    Ваше прізвище:
+                    <input type="text" name="client-surname" placeholder="Прізвище" required> 
                 </label>
                 <br>
-                <label>Gender:</label>
+                <label for="phone">Ваш номер телефону:</label>
+                <input type="tel" id="phone" name="client-phone"
+                    placeholder="+380-000-00-00" required>
+                <small> Формат:+380 12-345-6789</small>
+                <br>
                 <label>
-                    <input type="radio" name="Gender" value="Male">Male
+                    Ваш email:   
+                    <input type="email" name="client-email" placeholder="email" required> 
+                </label>
+                <br>
+                <br>
+                <label>Стать:</label>
+                <label>
+                    <input type="radio" name="Gender" value="Male">Чоловіча
                 </label>
                 <label>
-                    <input type="radio" name="Gender" value="Female">Female
+                    <input type="radio" name="Gender" value="Female">Жіноча
                 </label>
                 <label>    
-                    <input type="radio" name="Gender" value="Other">Other
+                    <input type="radio" name="Gender" value="Other">Інша
                 </label>
-                    <br>
+                <br>
+                <br>
+                <label for="birthday">Вкажіть свою дату народження:</label>
+                    <input type="date" id="birthday" name="client-birthday" min="1900-01-01" max="2020-01-01" required>
+                        <span class="validity"></span>
+                <br>
+                <br>
+                <fieldset>
+                
+                    <legend>Виберіть ваших улюблених акторів серіалу "Мандалорець":</legend>
+                
+                <br>
+                    <input type="checkbox" id="pedro" name="pedro">
+                        <label for="pedro">Педро Паскаль</label>
+                <br>
+                    <input type="checkbox" id="carno" name="carno">
+                        <label for="carno">Джина Карно</label>
+                </fieldset>
+                <br>
+                <div >
+                <a>Виберіть свій улюблений колір:</a>
+                <br>
+                    <input type="color" id="red" name="favourite color"
+                        value="#FF0000">
+                        <label for="red">Колір</label>
+                </div>
+                <label for="file">Ваш улюблений момент:</label>
+                    <input type="file"
+                        id="file" name="file"
+                        accept="image/png, image/jpeg">
+                        <small>(картинки в форматі jpeg та png)</small>
+                <br>
+                <label for="url">Поділіться посиланням на свій улюблений фільм:</label>
+                    <input type="url" name="url" id="url"
+                        placeholder="https://example.com"
+                        pattern="https://.*" size="30">
+                <br>
                 <label>
                     <input type="submit">
                 </label>
