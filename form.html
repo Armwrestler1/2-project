@@ -1,96 +1,100 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Форма зворотнього звязку</title>
-    </head>
-    <body>
-        <header>
-            <h1>Форма для участі у фан групі</h1>
-            <h2>Заповніть форму нижче для того щоб ми дізнались про вас більше і могли запропонувати для вас цікаві фільми та серіали на основі ваших вподобань!</h2>
-            <nav>
-                <a href="index.html">Головна</a>
-            </nav>
-        </header>
-        <main>
-            <form action="https://formspree.io/myydrqvj" method="POST" target="_self">
-                <label>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Форма зворотнього звязку</title>
+</head>
+
+<body>
+	<header>
+		<h1>Форма для участі у фан групі</h1>
+		<h2>Заповніть форму нижче для того щоб ми дізнались про вас більше і могли запропонувати для вас цікаві фільми
+			та серіали на основі ваших вподобань!</h2>
+		<nav>
+			<a href="index.html">Головна</a>
+		</nav>
+	</header>
+	<main>
+		<form action="https://formspree.io/myydrqvj" method="POST" target="_self">
+			<label>
                     Ваше імя:
                     <input type="text" name="client-name" placeholder="Імя" required> 
                 </label>
-                <br>
-                <label>
+			<br>
+			<label>
                     Ваше прізвище:
                     <input type="text" name="client-surname" placeholder="Прізвище" required> 
                 </label>
-                <br>
-                <label for="phone">Ваш номер телефону:</label>
-                <input type="tel" id="phone" name="client-phone"
+			<br>
+			<label for="phone">Ваш номер телефону:</label>
+			<input type="tel" id="phone" name="client-phone"
                     placeholder="+380-000-00-00" required>
-                <small> Формат:+380 12-345-6789</small>
-                <br>
-                <label>
+			<small> Формат:+380 12-345-6789</small>
+			<br>
+			<label>
                     Ваш email:   
                     <input type="email" name="client-email" placeholder="email" required> 
                 </label>
-                <br>
-                <br>
-                <label>Стать:</label>
-                <label>
+			<br>
+			<br>
+			<label>Стать:</label>
+			<label>
                     <input type="radio" name="Gender" value="Male">Чоловіча
                 </label>
-                <label>
+			<label>
                     <input type="radio" name="Gender" value="Female">Жіноча
                 </label>
-                <label>    
+			<label>
                     <input type="radio" name="Gender" value="Other">Інша
                 </label>
-                <br>
-                <br>
-                <label for="birthday">Вкажіть свою дату народження:</label>
-                    <input type="date" id="birthday" name="client-birthday" min="1900-01-01" max="2020-01-01" required>
-                        <span class="validity"></span>
-                <br>
-                <br>
-                <fieldset>
-                
-                    <legend>Виберіть ваших улюблених акторів серіалу "Мандалорець":</legend>
-                
-                <br>
-                    <input type="checkbox" id="pedro" name="favourite-actor" value="Педро Паскаль">
-                        <label for="pedro">Педро Паскаль</label>
-                <br>
-                    <input type="checkbox" id="carno" name="favourite-actor" value="Джина Карно">
-                        <label for="carno">Джина Карно</label>
-                </fieldset>
-                <br>
-                <div >
-                <a>Виберіть свій улюблений колір:</a>
-                <br>
-                    <input type="color" id="red" name="favourite color"
+			<br>
+			<br>
+			<label for="birthday">Вкажіть свою дату народження:</label>
+			<input type="date" id="birthday" name="client-birthday" min="1900-01-01" max="2020-01-01" required>
+			<span class="validity"></span>
+			<br>
+			<br>
+			<fieldset>
+
+				<legend>Виберіть ваших улюблених акторів серіалу "Мандалорець":</legend>
+
+				<br>
+				<input type="checkbox" id="pedro" name="favourite-actor" value="Педро Паскаль">
+				<label for="pedro">Педро Паскаль</label>
+				<br>
+				<input type="checkbox" id="carno" name="favourite-actor" value="Джина Карно">
+				<label for="carno">Джина Карно</label>
+			</fieldset>
+			<br>
+			<div>
+				<a>Виберіть свій улюблений колір:</a>
+				<br>
+				<input type="color" id="red" name="favourite color"
                         value="#FF0000">
-                        <label for="red">Колір</label>
-                </div>
-                <label for="file">Ваш улюблений момент:</label>
-                    <input type="file"
+				<label for="red">Колір</label>
+			</div>
+			<label for="file">Ваш улюблений момент:</label>
+			<input type="file"
                         id="file" name="file"
                         accept="image/png, image/jpeg">
-                        <small>(картинки в форматі jpeg та png)</small>
-                <br>
-                <label for="url">Поділіться посиланням на свій улюблений фільм:</label>
-                    <input type="url" name="url" id="url"
+			<small>(картинки в форматі jpeg та png)</small>
+			<br>
+			<label for="url">Поділіться посиланням на свій улюблений фільм:</label>
+			<input type="url" name="url" id="url"
                         placeholder="https://example.com"
                         pattern="https://.*" size="30">
-                <br>
-                <label>
+			<br>
+			<label>
                     <input type="submit">
                 </label>
-                <label>
+			<label>
                     <input type="reset">
                 </label>
-            </form>
-        </main>
+		</form>
+	</main>
 </body>
+
 </html>
